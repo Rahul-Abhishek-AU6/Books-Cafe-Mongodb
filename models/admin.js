@@ -62,24 +62,6 @@ adminSchema.pre('save', function (next) {
     }
     
   });
-  /*
-  userSchema.pre("save", function(next) {
-    var user = this;
-    // Check whether password field is modified
-    if (user.isModified("password")) {
-      bcrypt
-        .hash(user.password, 10)
-        .then(function(hashedPassword) {
-          user.password = hashedPassword;
-          next();
-        })
-        .catch(function(err) {
-          next(err);
-        });
-    }
-  });*/
-  
-
 var Admin = mongoose.model("admin", adminSchema);
 module.exports = Admin;
 
